@@ -1,0 +1,42 @@
+/* css/compatibilidad.css - Estilos para las reglas de compatibilidad */
+
+.compatibilidad-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.compatibilidad-container h2 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.compatibilidad-container p {
+    color: #A0B0A0;
+    margin-bottom: 25px;
+}
+
+.reglas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.regla-card {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 20px;
+}
+
+.regla-card h3 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.regla-card p {
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
