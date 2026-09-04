@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BuildMyPC - Configura y verifica la compatibilidad de tu PC Gamer en tiempo real.">
+    <title>BuildMyPC - Armador de PC</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/armador.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>BuildMyPC</h1>
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="detalle.html">Componentes</a></li>
+                <li><a href="armador.html" class="active">Armador</a></li>
+                <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="auth.html">Ingresar</a></li>
+            </ul>
+
+            <div class="selector-rol">
+                <select id="simulated-role" aria-label="Seleccionar perfil simulado">
+                    <option value="visitante">Visitante</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="armador-container">
+        <section class="armador-grid">
+            
+            <!-- Panel de Selección de Hardware -->
+            <article class="configurador-card">
+                <h2>Selecciona tus Componentes</h2>
+                
+                <form id="form-armador">
+                    <div class="form-group">
+                        <label for="select-cpu">Procesador (CPU):</label>
+                        <select id="select-cpu">
+                            <option value="">-- Selecciona una CPU --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-mobo">Placa Madre (Motherboard):</label>
+                        <select id="select-mobo">
+                            <option value="">-- Selecciona una Placa Madre --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-gpu">Tarjeta Gráfica (GPU):</label>
+                        <select id="select-gpu">
+                            <option value="">-- Selecciona una Tarjeta Gráfica --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-psu">Fuente de Poder (PSU):</label>
+                        <select id="select-psu">
+                            <option value="">-- Selecciona una Fuente de Poder --</option>
+                        </select>
+                    </div>
+                </form>
+            </article>
+
+            <!-- Resumen Técnico en Tiempo Real -->
+            <article class="resumen-card">
+                <h2>Resumen de Compatibilidad</h2>
+
+                <div class="metricas-grid">
+                    <div class="metrica-item">
+                        <span>Consumo Estimado (TDP):</span>
+                        <strong id="val-tdp">0 W</strong>
+                    </div>
+
+                    <div class="metrica-item">
+                        <span>Capacidad Fuente:</span>
+                        <strong id="val-psu">0 W</strong>
+                    </div>
+
+                    <div class="metrica-item">
+                        <span>Margen de Potencia:</span>
+                        <strong id="val-margen">0 W</strong>
+                    </div>
+
+                    <div class="metrica-item">
+                        <span>Puntaje de Rendimiento:</span>
+                        <strong id="val-score" class="score-destacado">0 / 100</strong>
+                    </div>
+                </div>
+
+                <!-- Notificaciones de Compatibilidad/Error -->
+                <div id="mensaje-compatibilidad" class="alerta-box info">
+                    Selecciona al menos CPU y Placa Madre para verificar el socket.
+                </div>
+
+                <div class="precio-total-container">
+                    <span>Total Estimado:</span>
+                    <h3 id="val-total">$ 0</h3>
+                </div>
+
+                <button id="btn-guardar-cotizacion" class="boton-principal full-width">Guardar y Cotizar</button>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Proyecto Frontend EP1</p>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/armador.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BuildMyPC - Inicia sesión o regístrate para guardar tus cotizaciones.">
+    <title>BuildMyPC - Acceso de Usuarios</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>BuildMyPC</h1>
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="detalle.html">Componentes</a></li>
+                <li><a href="armador.html">Armador</a></li>
+                <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="auth.html" class="active">Ingresar</a></li>
+            </ul>
+
+            <div class="selector-rol">
+                <select id="simulated-role" aria-label="Seleccionar perfil simulado">
+                    <option value="visitante">Visitante</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        
+        <!-- Formulario de Iniciar Sesión -->
+        <section class="auth-box">
+            <h2>Iniciar Sesión</h2>
+            <form id="form-login" novalidate>
+                <div class="form-group">
+                    <label for="login-email">Correo Electrónico:</label>
+                    <input type="email" id="login-email" placeholder="ejemplo@duocuc.cl" required>
+                    <span class="error-text" id="error-login-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                    <span class="error-text" id="error-login-password"></span>
+                </div>
+
+                <button type="submit" class="boton-principal full-width">Ingresar</button>
+            </form>
+        </section>
+
+        <!-- Formulario de Registro -->
+        <section class="auth-box">
+            <h2>Crear Cuenta</h2>
+            <form id="form-registro" novalidate>
+                <div class="form-group">
+                    <label for="reg-nombre">Nombre Completo:</label>
+                    <input type="text" id="reg-nombre" placeholder="Joaquín Ferrada" required>
+                    <span class="error-text" id="error-reg-nombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Correo Electrónico:</label>
+                    <input type="email" id="reg-email" placeholder="tu_correo@duocuc.cl" required>
+                    <span class="error-text" id="error-reg-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-pass">Contraseña (Mín. 6 caracteres):</label>
+                    <input type="password" id="reg-pass" placeholder="••••••••" required>
+                    <span class="error-text" id="error-reg-pass"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-pass-confirm">Confirmar Contraseña:</label>
+                    <input type="password" id="reg-pass-confirm" placeholder="••••••••" required>
+                    <span class="error-text" id="error-reg-pass-confirm"></span>
+                </div>
+
+                <button type="submit" class="boton-secundario full-width">Registrarse</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Proyecto Frontend EP1</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+
+</html>
