@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC - Informe de Compatibilidad</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/compatibilidad.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>BuildMyPC</h1>
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="detalle.html">Componentes</a></li>
+                <li><a href="armador.html">Armador</a></li>
+                <li><a href="compatibilidad.html" class="active">Compatibilidad</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="auth.html">Ingresar</a></li>
+            </ul>
+
+            <div class="selector-rol">
+                <select id="simulated-role">
+                    <option value="visitante">Visitante</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="compatibilidad-container" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h2>Reglas de Verificación Técnica</h2>
+        <p>Nuestro algoritmo analiza 3 factores críticos antes de emitir una cotización:</p>
+
+        <section class="regla-card" style="background: var(--color-superficie); border: 1px solid var(--color-borde); padding: 20px; border-radius: var(--radio-borde); margin-top: 20px;">
+            <h3 style="color: var(--color-acento);">1. Coincidencia de Socket</h3>
+            <p>Compara el socket físico del procesador (ej: AM5, LGA1700) con el socket de la placa madre. Si no coinciden, la build se marca como no viable.</p>
+        </section>
+
+        <section class="regla-card" style="background: var(--color-superficie); border: 1px solid var(--color-borde); padding: 20px; border-radius: var(--radio-borde); margin-top: 20px;">
+            <h3 style="color: var(--color-acento);">2. Balance de Potencia Eléctrica</h3>
+            <p>Suma el consumo en Watts (TDP) del procesador y la tarjeta de video, añadiendo 100W adicionales para placa, memoria y almacenamiento. Si la fuente de poder entrega menos potencia, el sistema notifica el déficit.</p>
+        </section>
+
+        <section class="regla-card" style="background: var(--color-superficie); border: 1px solid var(--color-borde); padding: 20px; border-radius: var(--radio-borde); margin-top: 20px;">
+            <h3 style="color: var(--color-acento);">3. Estimación de Puntaje de Rendimiento</h3>
+            <p>Procesa los puntajes de referencia de la CPU y GPU para entregar un valor entre 0 y 100 que sirva de guía al usuario no técnico.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Proyecto Frontend EP1</p>
+    </footer>
+
+</body>
+
+</html>

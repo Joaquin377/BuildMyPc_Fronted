@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BuildMyPC - Resumen de cotización de componentes y PC Gamer.">
+    <title>BuildMyPC - Resumen de Cotización</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/cotizaciones.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>BuildMyPC</h1>
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="detalle.html">Componentes</a></li>
+                <li><a href="armador.html">Armador</a></li>
+                <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                <li><a href="cotizacion.html" class="active">Cotización</a></li>
+                <li><a href="auth.html">Ingresar</a></li>
+            </ul>
+
+            <div class="selector-rol">
+                <select id="simulated-role" aria-label="Seleccionar perfil simulado">
+                    <option value="visitante">Visitante</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cotizacion-container">
+        <section class="resumen-section">
+            <h2>Resumen de tu Cotización</h2>
+            
+            <table class="tabla-cotizacion">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Modelo</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+                <tbody id="cotizacion-items">
+                    <tr>
+                        <td>Procesador (CPU)</td>
+                        <td>AMD Ryzen 7 7800X3D</td>
+                        <td>$ 420.000</td>
+                    </tr>
+                    <tr>
+                        <td>Tarjeta Gráfica (GPU)</td>
+                        <td>NVIDIA RTX 4070 SUPER 12GB</td>
+                        <td>$ 680.000</td>
+                    </tr>
+                    <tr>
+                        <td>Placa Madre</td>
+                        <td>ASUS ROG STRIX B650-A</td>
+                        <td>$ 220.000</td>
+                    </tr>
+                    <tr>
+                        <td>Fuente de Poder</td>
+                        <td>Corsair RM750e 750W 80+ Gold</td>
+                        <td>$ 115.000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Total Estimado:</th>
+                        <th id="total-cotizacion">$ 1.435.000</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="acciones-cotizacion">
+                <a href="armador.html" class="boton-secundario">Modificar Build</a>
+                <button id="btn-enviar-cotizacion" class="boton-principal">Solicitar Cotización Oficial</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Proyecto Frontend EP1</p>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/cotizacion.js"></script>
+</body>
+
+</html>

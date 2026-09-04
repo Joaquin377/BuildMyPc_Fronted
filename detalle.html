@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC - Detalle del Componente</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/detalle.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <h1>BuildMyPC</h1>
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="detalle.html" class="active">Componentes</a></li>
+                <li><a href="armador.html">Armador</a></li>
+                <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="auth.html">Ingresar</a></li>
+            </ul>
+
+            <div class="selector-rol">
+                <select id="simulated-role">
+                    <option value="visitante">Visitante</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="detalle-container">
+        <article class="ficha-producto">
+            <div class="imagen-producto">
+                <div class="espacio-imagen">
+                    <span>[ Imagen Componente ]</span>
+                </div>
+            </div>
+            <div class="info-producto">
+                <h2 id="det-nombre">AMD Ryzen 7 7800X3D</h2>
+                <p class="categoria-badge">Procesador (CPU)</p>
+                <p class="precio-detalle" id="det-precio">$ 420.000</p>
+                
+                <h3>Especificaciones Técnicas</h3>
+                <ul>
+                    <li><strong>Socket:</strong> AM5</li>
+                    <li><strong>Consumo Térmico (TDP):</strong> 120W</li>
+                    <li><strong>Núcleos / Hilos:</strong> 8 / 16</li>
+                    <li><strong>Frecuencia Base:</strong> 4.2 GHz</li>
+                </ul>
+
+                <button class="boton-principal" style="margin-top: 20px;">Añadir al Armador</button>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Proyecto Frontend EP1</p>
+    </footer>
+
+</body>
+
+</html>
