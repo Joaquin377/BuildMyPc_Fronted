@@ -1,0 +1,49 @@
+/* css/cotizaciones.css - Estilos para la vista de Cotización */
+
+.cotizacion-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.resumen-section {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 30px;
+}
+
+.resumen-section h2 {
+    color: var(--color-primario);
+    margin-bottom: 25px;
+}
+
+.tabla-cotizacion {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.tabla-cotizacion th, 
+.tabla-cotizacion td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla-cotizacion th {
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+}
+
+.tabla-cotizacion tfoot tr th {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+    border-top: 2px solid var(--color-primario);
+}
+
+.acciones-cotizacion {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
