@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BuildMyPC - Plataforma para armar y cotizar computadores gamer personalizados con validación de compatibilidad técnica.">
+    <meta name="description" content="BuildMyPC - Plataforma de cotización y armado de computadores gamer personalizados.">
     <title>BuildMyPC - Inicio</title>
 
-    <!-- Hojas de estilo externas compartidas -->
+    <!-- Hojas de estilo vinculadas a la carpeta css -->
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/inicio.css">
 </head>
@@ -53,15 +53,15 @@
                 <a href="armador.html" class="boton-principal">Comenzar a Armar</a>
             </article>
 
-            <!-- Imagen real con texto alternativo en lugar del placeholder -->
+            <!-- Imagen real de hardware con atributo alt obligatorio -->
             <div class="hero-imagen">
                 <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=800" 
-                     alt="Gabinete de computador gamer personalizado con iluminación RGB y componentes de alto rendimiento" 
-                     style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radio-borde); border: 1px solid var(--color-borde);">
+                     alt="Computador gamer armado con iluminación RGB y tarjeta de video de alto rendimiento" 
+                     style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radio-borde); border: 1px solid var(--color-borde, #2A362A);">
             </div>
         </section>
 
-        <!-- Sección de Builds Recomendadas (Renderizado dinámico con JS) -->
+        <!-- Sección de Builds Recomendadas (Renderizado dinámico mediante JS) -->
         <section class="destacados">
             <h2>Builds Recomendadas</h2>
             <div id="contenedor-builds">
@@ -74,7 +74,7 @@
             <h2>Conoce cómo funciona nuestra plataforma</h2>
             <p>Aprende a verificar la compatibilidad de tu Hardware en pocos pasos.</p>
             <div class="video-contenedor">
-                <video controls poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=800" style="width: 100%; max-width: 800px; border-radius: var(--radio-borde); border: 1px solid var(--color-borde);">
+                <video controls poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=800" style="width: 100%; max-width: 800px; border-radius: var(--radio-borde); border: 1px solid var(--color-borde, #2A362A);">
                     <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                     Tu navegador no soporta el reproductor de video HTML5.
                 </video>
@@ -82,13 +82,13 @@
         </section>
     </main>
 
-    <!-- Footer informativo del proyecto -->
+    <!-- Footer Informativo -->
     <footer>
         <p>&copy; 2026 BuildMyPC - Plataforma de cotización de computadores gamer</p>
         <p>Evaluación Parcial 1 - Desarrollo Frontend</p>
     </footer>
 
-    <!-- Carga de scripts -->
+    <!-- Carga de scripts en orden (primero la base de datos, luego la lógica de inicio) -->
     <script src="js/datos.js"></script>
     <script src="js/inicio.js"></script>
 </body>
