@@ -1,0 +1,60 @@
+/* css/detalle.css - Estilos para la ficha detallada del producto */
+
+.detalle-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.ficha-producto {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.imagen-producto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.info-producto {
+    flex: 2;
+    min-width: 280px;
+}
+
+.info-producto h2 {
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.categoria-badge {
+    display: inline-block;
+    background-color: var(--color-borde);
+    color: var(--color-primario);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.precio-detalle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+}
+
+.info-producto ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.info-producto li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
