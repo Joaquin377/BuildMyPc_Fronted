@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BuildMyPC - Plataforma de armado y cotización de computadores gamer personalizados.">
-
+    <meta name="description" content="BuildMyPC - Plataforma para armar y cotizar computadores gamer personalizados con validación de compatibilidad técnica.">
     <title>BuildMyPC - Inicio</title>
 
     <!-- Hojas de estilo externas compartidas -->
@@ -15,39 +14,83 @@
 
 <body>
 
-    <header class="main-header">
-        <nav class="navbar" aria-label="Navegación principal">
-            
+    <header>
+        <nav>
             <div class="logo">
                 <a href="index.html">
                     <h1>BuildMyPC</h1>
                 </a>
             </div>
 
-            <!-- Menú de navegación accesible entre todas las vistas de EP1 -->
-            <ul class="nav-links">
+            <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="detalle.html">Componentes</a></li>
                 <li><a href="armador.html">Armador</a></li>
+                <li><a href="compatibilidad.html">Compatibilidad</a></li>
                 <li><a href="cotizacion.html">Cotización</a></li>
-                <li><a href="admin-profile.html">Panel</a></li>
+                <li><a href="auth.html">Ingresar</a></li>
             </ul>
 
-            <!-- Acceso a Auth y Selector de Perfil Simulado (Requisito EP1/EP2) -->
-            <div class="user-actions">
-                <div class="role-simulator">
-                    <label for="simulated-role">Rol (Simulado):</label>
-                    <select id="simulated-role" name="simulated-role" aria-label="Seleccionar perfil simulado">
-                        <option value="visitante">Visitante</option>
-                        <option value="usuario">Usuario</option>
-                        <option value="tecnico">Técnico</option>
-                        <option value="admin">Administrador</option>
-                    </select>
-                </div>
-                <a href="auth.html" class="btn-login">Ingresar</a>
+            <!-- Selector de perfil simulado exigido en EP1 -->
+            <div class="selector-rol">
+                <select id="simulated-role" aria-label="Seleccionar perfil simulado">
+                    <option value="visitante">Visitante</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="admin">Administrador</option>
+                </select>
             </div>
-
         </nav>
     </header>
 
-    <main id="main-content">
+    <main>
+        <!-- Sección HERO -->
+        <section class="hero">
+            <article class="hero-contenido">
+                <h2>Arma tu PC Gamer a la medida</h2>
+                <p>Configura componentes compatibles, calcula el consumo energético exacto y obtén una cotización en tiempo real sin complicaciones técnicas.</p>
+                <a href="armador.html" class="boton-principal">Comenzar a Armar</a>
+            </article>
+
+            <!-- Imagen real con texto alternativo en lugar del placeholder -->
+            <div class="hero-imagen">
+                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=800" 
+                     alt="Gabinete de computador gamer personalizado con iluminación RGB y componentes de alto rendimiento" 
+                     style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radio-borde); border: 1px solid var(--color-borde);">
+            </div>
+        </section>
+
+        <!-- Sección de Builds Recomendadas (Renderizado dinámico con JS) -->
+        <section class="destacados">
+            <h2>Builds Recomendadas</h2>
+            <div id="contenedor-builds">
+                <!-- Se inyecta dinámicamente desde js/inicio.js -->
+            </div>
+        </section>
+
+        <!-- Sección de Video Embebido (Requisito Obligatorio EP1) -->
+        <section class="video">
+            <h2>Conoce cómo funciona nuestra plataforma</h2>
+            <p>Aprende a verificar la compatibilidad de tu Hardware en pocos pasos.</p>
+            <div class="video-contenedor">
+                <video controls poster="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=800" style="width: 100%; max-width: 800px; border-radius: var(--radio-borde); border: 1px solid var(--color-borde);">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    Tu navegador no soporta el reproductor de video HTML5.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer informativo del proyecto -->
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Plataforma de cotización de computadores gamer</p>
+        <p>Evaluación Parcial 1 - Desarrollo Frontend</p>
+    </footer>
+
+    <!-- Carga de scripts -->
+    <script src="js/datos.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+
+</html>
