@@ -1,0 +1,94 @@
+.catalogo-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.productos-section h2 {
+    color: var(--color-primario, #72B01D);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.controles-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.controles-catalogo input,
+.controles-catalogo select {
+    padding: 12px;
+    background-color: var(--color-superficie, #141C14);
+    color: var(--color-texto, #EFEFEF);
+    border: 1px solid var(--color-borde, #2A362A);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    min-width: 200px;
+}
+
+.controles-catalogo input:focus,
+.controles-catalogo select:focus {
+    border-color: var(--color-primario, #72B01D);
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card-producto {
+    background-color: var(--color-superficie, #141C14);
+    border: 1px solid var(--color-borde, #2A362A);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-producto:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primario, #72B01D);
+}
+
+.card-producto h3 {
+    font-size: 1.2rem;
+    color: var(--color-texto, #EFEFEF);
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.card-producto .detalles {
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario, #A0B0A0);
+    margin-bottom: 15px;
+}
+
+.card-producto .precio {
+    font-size: 1.3rem;
+    color: var(--color-primario, #72B01D);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-producto .boton-principal {
+    background-color: var(--color-primario, #72B01D);
+    color: #0B0E0B;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.card-producto .boton-principal:hover {
+    opacity: 0.9;
+}
