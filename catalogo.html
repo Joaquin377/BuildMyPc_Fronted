@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC - Catálogo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>BuildMyPC</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="armador.html">Armador</a></li>
+                <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="auth.html">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="catalogo-container">
+        <section class="productos-section">
+            <h2>Catálogo de Productos</h2>
+            
+            <!-- Controles de filtrado -->
+            <div class="controles-catalogo" style="margin-bottom: 20px;">
+                <input type="text" id="buscar-input" placeholder="Buscar componente..." style="padding: 8px; width: 200px;">
+                <select id="categoria-select" style="padding: 8px; margin-left: 10px;">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="cpus">Procesadores</option>
+                    <option value="motherboards">Placas Madres</option>
+                    <option value="gpus">Tarjetas Gráficas</option>
+                    <option value="psus">Fuentes de Poder</option>
+                </select>
+            </div>
+
+            <!-- JS inyectará todo aquí -->
+            <div id="grid-productos" class="grid-productos"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuildMyPC - Proyecto Frontend EP1</p>
+    </footer>
+
+    <!-- Carga de la base de datos PRIMERO y luego la lógica del catálogo -->
+    <script src="js/datos.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
