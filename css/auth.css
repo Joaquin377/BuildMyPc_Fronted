@@ -1,0 +1,85 @@
+.auth-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.auth-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-superficie, #141C14);
+    border: 1px solid var(--color-borde, #2A362A);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.auth-box h2 {
+    color: var(--color-primario, #72B01D);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.auth-box .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box label {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--color-texto, #EFEFEF);
+    font-weight: bold;
+}
+
+.auth-box input {
+    background-color: var(--color-fondo, #0B0E0B);
+    color: var(--color-texto, #EFEFEF);
+    border: 1px solid var(--color-borde, #2A362A);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.auth-box input:focus {
+    outline: none;
+    border-color: var(--color-primario, #72B01D);
+}
+
+.error-text {
+    color: #D9534F;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    min-height: 18px;
+    display: block;
+    font-weight: bold;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.auth-box .boton-principal {
+    background-color: var(--color-primario, #72B01D);
+    color: #0B0E0B;
+}
+
+.auth-box .boton-secundario {
+    background-color: #2A362A;
+    color: var(--color-primario, #72B01D);
+}
+
+.auth-box button:hover {
+    opacity: 0.9;
+}
