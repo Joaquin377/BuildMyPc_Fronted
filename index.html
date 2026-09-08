@@ -68,16 +68,18 @@
                 <!-- Se inyecta dinámicamente desde js/inicio.js -->
             </div>
         </section>
-
-        <!-- Sección de Video Embebido (Requisito Obligatorio EP1) -->
+        
+       <!-- Sección de Video Embebido -->
         <section class="video">
             <h2>Conoce cómo funciona nuestra plataforma</h2>
             <p>Aprende a verificar la compatibilidad de tu Hardware en pocos pasos.</p>
-                <div class="video-contenedor" style="display: flex; justify-content: center; width: 100%;">
-                    <img src="img/PC5090.avif" 
-                        alt="PC Gamer con RTX 5090 y estética Cyber-Green" 
-                        class="imagen-interactiva">
-                </div>
+            <div class="video-contenedor" style="display: flex; justify-content: center; width: 100%;">
+                <!-- Se agregó 'controls' para forzar la barra de reproducción -->
+                <video controls autoplay muted loop playsinline style="width: 100%; max-width: 800px; border-radius: 8px; border: 1px solid #2A362A; box-shadow: 0 0 10px rgba(114, 176, 29, 0.3);">
+                <source src="img/rtx50.mov" type="video/mp4">
+                Tu navegador no soporta el reproductor de video HTML5.
+<               /video>
+            </div>
         </section>
     </main>
 
